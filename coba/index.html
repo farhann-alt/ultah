@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Ulang Tahun, Sayang!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8e1f4;
+      margin: 0;
+      text-align: center;
+    }
+
+    .welcome-btn {
+      padding: 15px 30px;
+      background-color: #ff3366;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .welcome-btn:hover {
+      background-color: #ff66b2;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Selamat Ulang Tahun, Sayang!</h1>
+    <p>Klik tombol di bawah ini untuk memulai perayaan dan mendengarkan musik!</p>
+    <button class="welcome-btn" onclick="startCelebration()">Mulai Perayaan</button>
+  </div>
+
+  <script>
+    function startCelebration() {
+      window.location.href = "main.html";  // Arahkan ke halaman utama
+    }
+  </script>
+</body>
+</html>

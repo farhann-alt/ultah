@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Ulang Tahun, Sayang!</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8e1f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    body.loaded main {
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      background-color: #ff66b2;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .header-text {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    #videoPlayer {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    #carousel {
+      display: flex;
+      overflow-x: scroll;
+      margin-top: 20px;
+      padding: 10px 0;
+      gap: 15px;
+    }
+
+    #carousel img {
+      height: 200px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .carousel-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .carousel-btn-left {
+      left: 0;
+    }
+
+    .carousel-btn-right {
+      right: 0;
+    }
+
+    .message {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 30px 20px;
+      color: #ff3366;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-text">
+    <img src="https://i.postimg.cc/4xmJQH4x/Whats-App-Image-2025-05-01-at-10-54-27.jpg" alt="Foto Pacar"> <!-- Ganti dengan foto profil -->
+    <span>Selamat Ulang Tahun, Sayang!</span>
+  </div>
+</header>
+
+<main>
+  <!-- Video Player -->
+  <video id="videoPlayer" controls>
+    <source src="tono.mp4" type="video/mp4"> <!-- Ganti dengan file video -->
+    Browser Anda tidak mendukung video tag.
+  </video>
+
+  <!-- Carousel Foto Kenangan -->
+  <div class="carousel-container">
+    <button class="carousel-btn carousel-btn-left" id="prevBtn">&#8592;</button>
+    <div id="carousel">
+      <img src="https://i.postimg.cc/jdTwcXBd/IMG-20240722-164329-862.jpg" alt="Kenangan 1" />
+      <img src="https://i.postimg.cc/W1Wd2Pzh/IMG-20240727-175656-986.jpg" alt="Kenangan 2" />
+      <img src="https://i.postimg.cc/SQfNSptk/Whats-App-Image-2025-05-01-at-10-49-17.jpg" alt="Kenangan 3" />
+      <img src="https://i.postimg.cc/1XB9JpNf/Whats-App-Image-2025-05-01-at-10-52-04.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/DfjHdjS1/IMG-20240724-084125-930.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/j2SVqBLS/IMG-20240722-140854-580.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/265T1YFM/Whats-App-Image-2025-05-01-at-11-00-27.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/sxQcJJLJ/Whats-App-Image-2025-05-01-at-11-01-17.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/JndxJFpn/Whats-App-Image-2025-05-01-at-11-01-17-1.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/cJ0FNwKs/Whats-App-Image-2025-05-01-at-11-03-53.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/vmh38T95/Whats-App-Image-2025-05-01-at-11-03-53-1.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/d1WH63VJ/Whats-App-Image-2025-05-01-at-11-04-14.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/sgpT8wg6/Whats-App-Image-2025-05-01-at-11-03-53-2.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/L8dyNr2g/Whats-App-Image-2025-05-01-at-11-03-54.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/6Qf17Ys2/Whats-App-Image-2025-05-01-at-11-05-37.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/1Rj7N8dH/Whats-App-Image-2025-05-01-at-11-03-54-1.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/SRJZv4nC/Whats-App-Image-2025-05-01-at-11-05-20.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/28LcdzRf/Whats-App-Image-2025-05-01-at-11-03-54-2.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/vB825fMP/Whats-App-Image-2025-05-01-at-11-04-56.jpg" alt="Kenangan 4" />
+      <img src="https://i.postimg.cc/Fz8Pt6Sq/Whats-App-Image-2025-05-01-at-11-03-56.jpg" alt="Kenangan 4" />
+    </div>
+    <button class="carousel-btn carousel-btn-right" id="nextBtn">&#8594;</button>
+  </div>
+
+  <!-- Ucapan -->
+  <div class="message">
+    <p>
+        Semoga hari-harimu penuh cinta dan senyum! Kamu adalah cahaya dalam hidupku, dan aku bersyukur bisa bertemu denganmu. 💖
+    </p>
+  </div>
+
+  <!-- Musik -->
+  <audio id="backgroundMusic" loop autoplay>
+    <source src="tonpo.mp3" type="audio/mp3"> <!-- Ganti dengan file musik -->
+    Browser Anda tidak mendukung tag audio.
+  </audio>
+</main>
+
+<script>
+  // Animasi masuk saat halaman dimuat
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    // Efek Confetti
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { x: 0.5, y: 0.5 }
+    });
+  });
+
+  // Navigasi carousel
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const carousel = document.getElementById('carousel');
+
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
